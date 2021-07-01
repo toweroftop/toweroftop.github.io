@@ -40,12 +40,18 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
 
 #### Code
 
-```Title
-
-
+```
+Hello World
 `C Lang printf("Hello World!");`
 `BAT echo Hello World!`
 `VB print "Hello World"`
 `C++ std::cout<<"Hello World!"`
 `JAVA System.out.println("Hello World!");`
 ```
+
+ ```C
+int main(int argc, char *argv[])
+{
+  for(;;) printf("Hello\n");
+}
+ ```
