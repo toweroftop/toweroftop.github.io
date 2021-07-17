@@ -8,12 +8,17 @@ function ddc() {
 	var heiget = 0
 	var dlen = 0
 	var dwidAsia = 0, dwidEurope = 0
-	height = parseFloat(document.getElementById("Text1").value)
+	height = parseFloat(document.getElementById("in1").value)
 	dlen = ((height - 105) * 0.619) / 3.14
 	dwidAsia = dlen / 3.14
 	dwidEurope = dwidAsia / (1.414 * 0.619)
-	alert("DingDing 长度: " + dlen + "DingDing 直径: " + dwidAsia + "(Asia)   " + dwidEurope + "(Europe)")
-	document.getElementById("Result1").innerHTML="Height: " + height + "\nDingDing 长度: " + dlen + "\nDingDing 直径: " + dwidAsia + "(Asia)   " + dwidEurope + "(Europe)"
+	alert("DingDing 长度: " + dlen +  + "(cm)" + "\nDingDing 直径: " + dwidAsia + "(cm)" + "(Asia)   " + dwidEurope + "(cm)" + "(Europe)")
+	document.getElementById("Result1").innerHTML="身高: " + height + "(cm)"
+	document.getElementById("Result2").innerHTML = "长度: " + dlen + "(cm)"
+	document.getElementById("Result3").innerHTML = "直径(Asia): " + dwidAsia + "(cm)"
+	document.getElementById("Result4").innerHTML = "直径(Europe): " + dwidEurope + "(cm)"
+	document.getElementById("Text1").value = "Height: " + height + "(cm)" + "\nDingDing 长度: " + dlen + "(cm)" + "\nDingDing 直径: " + dwidAsia + "(cm)" + "(Asia)   " + dwidEurope + "(cm)" + "(Europe)"
+	
 	//document.getElementById("LinkText").innerHTML = String(height)
 	
 }
@@ -29,7 +34,14 @@ function ddc() {
 <p id="LinkText">https://toweroftop.github.io <a id ="link1" href="https://toweroftop.github.io/">Link</a> </p>
 <button id="btu1" onClick=ddc()>计算</button>
 <br />
-<textarea id="Text1" name="Text1" style="width: 200px; height: 50px;">160</textarea>
-<p id="Show1"><strong>Result:</strong>  <a id="Result1">0</a></p>
+<input type="text" data-hotkey="s,/" id="in1" name="in1" value="" placeholder="Input your height(cm)" data-unscoped-placeholder="Input your height(cm)" data-scoped-placeholder="Input your height(cm)" autocapitalize="none" role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-autocomplete="list" aria-controls="jump-to-results" aria-label="Input your height(cm)" spellcheck="false" autocomplete="off">
+<p id="Show1"><strong>Result:</strong></p>
+<p id="Result1">身高: (cm)</p>
+<p id="Result2">长度: (cm)</p>
+<p id="Result3">直径(Asia): (cm)</p>
+<p id="Result4">直径(Europe): (cm)</p>
+<br />
+<!--style="width: 200px; height: 50px;"-->
+<textarea id="Text1" name="Text1" style="width: 220px; height: 150px;"></textarea>
 </body>
 </html>
